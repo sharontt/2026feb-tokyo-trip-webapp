@@ -11,38 +11,25 @@
 <header>
 <h1>東京旅行計劃</h1>
 <nav>
-<button onclick="showSection('itinerary')">行程表</button>
-<button onclick="showSection('map')">地圖</button>
+<button onclick="showSection('day6')">2月6日</button>
+<button onclick="showSection('day7')">2月7日</button>
+<button onclick="showSection('day8')">2月8日</button>
+<button onclick="showSection('day9')">2月9日</button>
+<button onclick="showSection('day10')">2月10日</button>
 <button onclick="showSection('weather')">天氣</button>
-<button onclick="showSection('todo')">待辦</button>
+<button onclick="showSection('shopping')">購物清單</button>
 <button onclick="showSection('packing')">行李清單</button>
 </nav>
 </header>
 <main>
-<section id='itinerary' class='active'>
-<h2>行程表</h2>
-<textarea id='itineraryInput' placeholder='輸入你的每日行程...'></textarea>
-</section>
-<section id='map'>
-<h2>地圖</h2>
-<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414291.1872743668!2d139.600782!3d35.673540!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857f4f8e4b%3A0x2f0e9f8b8b8b8b8b!2z5p2x5Lqs6YO95ZOB5bed!5e0!3m2!1szh-TW!2sjp!4v1700000000000' width='100%' height='300' style='border:0;' allowfullscreen='' loading='lazy'></iframe>
-</section>
-<section id='weather'>
-<h2>天氣資訊</h2>
-<input type='text' id='city' placeholder='輸入城市 (Tokyo)'>
-<button onclick='getWeather()'>查詢天氣</button>
-<div id='weatherResult'></div>
-</section>
-<section id='todo'>
-<h2>待辦清單</h2>
-<input type='text' id='todoInput' placeholder='新增待辦事項'>
-<button onclick='addTodo()'>新增</button>
-<ul id='todoList'></ul>
-</section>
-<section id='packing'>
-<h2>行李清單</h2>
-<div id='packingCategories'></div>
-</section>
+<section id='day6' class='active'><h2>2月6日行程</h2><div class='timeline' id='timeline6'></div><button onclick="addTimelineItem('timeline6')">新增行程</button></section>
+<section id='day7'><h2>2月7日行程</h2><div class='timeline' id='timeline7'></div><button onclick="addTimelineItem('timeline7')">新增行程</button></section>
+<section id='day8'><h2>2月8日行程</h2><div class='timeline' id='timeline8'></div><button onclick="addTimelineItem('timeline8')">新增行程</button></section>
+<section id='day9'><h2>2月9日行程</h2><div class='timeline' id='timeline9'></div><button onclick="addTimelineItem('timeline9')">新增行程</button></section>
+<section id='day10'><h2>2月10日行程</h2><div class='timeline' id='timeline10'></div><button onclick="addTimelineItem('timeline10')">新增行程</button></section>
+<section id='weather'><h2>天氣資訊</h2><input type='text' id='city' placeholder='輸入城市 (Tokyo)'><button onclick='getWeather()'>查詢天氣</button><div id='weatherResult'></div></section>
+<section id='shopping'><h2>購物清單</h2><select id='shoppingCategory'><option>化妝品</option><option>食物</option><option>日用品</option></select><input type='text' id='shoppingInput' placeholder='新增項目'><button onclick='addShopping()'>新增</button><div id='shoppingLists'></div></section>
+<section id='packing'><h2>行李清單</h2><input type='text' id='packingInput' placeholder='新增項目'><button onclick='addPacking()'>新增</button><ul id='packingList'></ul></section>
 </main>
 <script src='script.js'></script>
 </body>
